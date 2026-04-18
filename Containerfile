@@ -16,6 +16,7 @@ ENV PATH="/home/codingagent/.local/bin:${PATH}"
 
 RUN curl -fsSL https://claude.ai/install.sh | bash
 
+# br does not have an aarch64 musl build so I have to rely on qemu in the podman machine
 RUN wget https://github.com/Dicklesworthstone/beads_rust/releases/download/v0.1.41/br-v0.1.41-linux_musl_amd64.tar.gz
 RUN tar xf br-v0.1.41-linux_musl_amd64.tar.gz
 RUN mv br ~/.local/bin/
