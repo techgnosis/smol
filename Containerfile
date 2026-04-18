@@ -27,3 +27,6 @@ RUN wget https://github.com/openai/codex/releases/download/rust-v0.121.0/codex-a
 RUN tar xf codex-aarch64-unknown-linux-musl.tar.gz
 RUN mv codex-aarch64-unknown-linux-musl ~/.local/bin/codex
 RUN rm codex-aarch64-unknown-linux-musl.tar.gz
+
+COPY codex.sh /home/codingagent/.local/bin/
+COPY claude.sh /home/codingagent/.local/bin/
